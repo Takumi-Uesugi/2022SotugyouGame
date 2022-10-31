@@ -32,7 +32,7 @@ private:
 
 	unsigned int timer_ = 0;
 	unsigned int sceneNum_ = 0;
-	Transform playerTransform_ = { 0 };c
+	Transform playerTransform_ = { 0 };
 	Transform enemyTransform_[256] = {0};
 
 };
