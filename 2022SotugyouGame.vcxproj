@@ -137,11 +137,15 @@
     <ClCompile Include="graphanimation.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="spinner.cpp" />
+    <ClCompile Include="Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gamescene.h" />
     <ClInclude Include="graphanimation.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="spinner.h" />
+    <ClInclude Include="Vector2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

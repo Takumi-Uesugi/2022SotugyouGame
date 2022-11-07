@@ -11,8 +11,7 @@ GameScene::~GameScene()
 void GameScene::Initalize()
 {
 	input_ = new Input;
-	playerTransform_.x = 100;
-	playerTransform_.y = 100;
+	playerTransform_.pos = new Vector2(100.0f, 100.0f);
 	playerTransform_.height = 15;
 	playerTransform_.width = 15;
 }
@@ -34,7 +33,22 @@ void GameScene::Update()
 
 		if (input_->GetKeyState(KEY_INPUT_W, KEYS_TOUCH))
 		{
-			playerTransform_.x += 1;
+			playerTransform_.pos->x += 1.0f;
+		}
+		if (input_->GetKeyState(KEY_INPUT_SPACE, KEYS_PUSH))
+		{
+			for (int i = 0; i < 3; i++)
+			{
+				if (playerShot_[i]->GetUseFlag() == 0)
+				{
+					playerShot_[i]->Create(*playerTransform_.pos, Vector2(0.0f, -5.0f));
+					break;
+				}
+			}
+		}
+		for (int i = 0; i < ENEMY_MAX; i++)
+		{
+
 		}
 		break;
 	default:
