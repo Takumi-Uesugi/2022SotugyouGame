@@ -19,16 +19,21 @@ enum SceneName
 	SCENE_GAMEOVER,
 };
 
-class GameScene
+class GameScene final
 {
 public:
-	GameScene();
-	~GameScene();
+	GameScene(const GameScene& obj) = delete;
+	GameScene& operator=(const GameScene& obj) = delete;
+
+	static GameScene* GetInstance();
+
 	void Initalize();
 	void Update();
 	void Draw();
 
 private:
+	GameScene();
+	~GameScene();
 	void Reset();
 	Input* input_ = nullptr;
 

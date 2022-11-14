@@ -1,11 +1,18 @@
 #include "gamescene.h"
 
+GameScene* GameScene::GetInstance()
+{
+	static GameScene instance;
+}
+
 GameScene::GameScene()
 {
 }
 
 GameScene::~GameScene()
 {
+	delete input_;
+	delete playerTransform_.pos;
 }
 
 void GameScene::Initalize()

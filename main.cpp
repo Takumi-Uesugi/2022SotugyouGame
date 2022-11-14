@@ -38,10 +38,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	// (ダブルバッファ)描画先グラフィック領域は裏面を指定
 	SetDrawScreen(DX_SCREEN_BACK);
 
-	// 画像などのリソースデータの変数宣言と読み込み
-	GameScene* gameScene = new GameScene;
-
 	//初期化処理
+	GameScene* gameScene = GameScene::GetInstance();
 	gameScene->Initalize();
 
 	// ゲームループで使う変数の宣言
@@ -78,7 +76,6 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 		}
 	}
 	//メモリ解放
-	delete gameScene;
 
 	// Dxライブラリ終了処理
 	DxLib_End();

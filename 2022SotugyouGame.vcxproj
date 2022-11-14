@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DXLibvector2override.cpp" />
     <ClCompile Include="gamescene.cpp" />
     <ClCompile Include="graphanimation.cpp" />
     <ClCompile Include="input.cpp" />
@@ -141,6 +142,7 @@
     <ClCompile Include="Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DXLibvector2override.h" />
     <ClInclude Include="gamescene.h" />
     <ClInclude Include="graphanimation.h" />
     <ClInclude Include="input.h" />
